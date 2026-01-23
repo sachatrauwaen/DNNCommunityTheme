@@ -1,0 +1,83 @@
+@using DotNetNuke.Web.MvcPipeline.Models
+@using DotNetNuke.Web.MvcPipeline.Skins
+@using DotNetNuke.Web.NewDDRMenu
+@model PageModel
+
+@section head {
+    @Html.SkinPartial("partials/_font-awesome")
+}
+
+<div class="wrap-skin">
+    <!-- Page content wrapper-->
+    <div class="page-content-wrapper">
+        <div class="sticky-top">
+            @Html.SkinPartial("partials/_top-bar-login-search")
+            <header class="skin-header bg-blue-extra-dark">
+                <div class="header-top">
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="logo col col-6 col-lg-3 flex-vert-align">
+                            @Html.SkinPartial("partials/_logo")
+                        </div>
+                        <div class="col d-lg-none text-end d-flex justify-content-end align-items-center">
+                            <button id="navbar-toggler" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+                        </div>
+                        <!-- Top navigation-->
+                        <div class="col-12 col-lg">
+                            <nav class="navbar navbar-expand-lg">
+                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                    @Html.DDRMenu(clientID: "topMenu", menuStyle: "assets/menus/topmenu", excludeNodes: "Admin,Host")
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+
+        <!-- Page content-->
+        <main class="skin-main content-wrap">
+            <div class="panes">
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-12">
+                            @Html.Pane(id: "contentpane", cssClass: "pane content-pane")
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="skin-footer bg-blue-super-dark skew-top">
+            <div class="container py-5">
+                <div class="row gx-5">
+                    <div class="col">
+                        @Html.Pane(id: "footer_pane_1", cssClass: "pane")
+                    </div>
+                    <div class="col">
+                        @Html.Pane(id: "footer_pane_2", cssClass: "pane")
+                    </div>
+                    <div class="col">
+                        @Html.Pane(id: "footer_pane_3", cssClass: "pane")
+                    </div>
+                    <div class="col">
+                        @Html.Pane(id: "footer_pane_4", cssClass: "pane")
+                    </div>
+                </div>
+            </div>
+            @Html.Pane(id: "footer_pane_full_width", cssClass: "pane footer_pane_full_width pb-0")
+            <div class="footer-bottom">
+                <div class="container pt-2">
+                    <div class="row">
+                        @Html.SkinPartial("partials/_footer-bottom")
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+
+@{
+    @Html.DnnJsInclude(filePath: "vendors/bootstrap/js/bootstrap.bundle.min.js", pathNameAlias: "SkinPath", defer: true)
+    @Html.DnnJsInclude(filePath: "vendors/theme/js/scripts.js", pathNameAlias: "SkinPath", defer: true)
+}

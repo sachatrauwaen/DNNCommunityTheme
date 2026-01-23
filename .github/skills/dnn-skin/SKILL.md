@@ -341,7 +341,7 @@ Create a `Views/` folder within your skin directory.
 **Key Points:**
 - Add `@using DotNetNuke.Web.NewDDRMenu` for DDRMenu helpers
 - `<dnn:MENU>` → `@Html.DDRMenu()` with named parameters
-- Use `clientID:` parameter instead of `id` attribute (it's required parameter)
+- Use `clientID:` parameter instead of `id` attribute and it is required parameter
 - Convert attributes to camelCase named parameters
 
 ---
@@ -644,6 +644,7 @@ Use this checklist when transforming a WebForms skin:
 - [ ] Move CSS/JS includes to `@section head { }` block
 - [ ] Transform all panes from `<div runat="server">` to `@Html.Pane()`
 - [ ] Transform all DNN controls to HTML helpers
+- [ ] Check if all DDRMenu HTML Helpers have a clientID
 - [ ] Test the skin
 
 ### Container Files
