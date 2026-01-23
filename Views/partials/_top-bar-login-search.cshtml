@@ -1,0 +1,19 @@
+@using DotNetNuke.Web.MvcPipeline.Models
+@using DotNetNuke.Web.MvcPipeline.Skins
+@model PageModel
+
+<div class="body-top-bar">
+    <div class="container">
+        <div class="row">
+            <div class="login-user-search">
+                <div id="login" class="user-login-wrap">
+                    @Html.User(cssClass: "user-link")
+                    @Html.Login(cssClass: "login-link")
+                </div>
+                <div class="search-wrap">
+                    @Html.Search(id: "search", showSite: false, showWeb: false, submit: "<i class=\"fa fa-search\"></i>", cssClass: "SearchButton")
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

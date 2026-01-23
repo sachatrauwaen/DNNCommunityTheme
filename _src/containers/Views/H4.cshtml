@@ -1,0 +1,16 @@
+@using DotNetNuke.Web.MvcPipeline.Containers
+@model DotNetNuke.Web.MvcPipeline.Models.ContainerModel
+
+<div class="cont-wrapper cont-h4">
+    <header class="cont-header mt-4 d-flex align-items-center">
+        <span class="cont-header-icon d-inline-block">
+            @Html.Icon(cssClass: "img-fluid me-2")
+        </span>
+        <h4 class="cont-header-title">
+            @Html.Title(cssClass: "cont-header-title")
+        </h4>
+    </header>
+    <section class="cont-content">
+        @Html.Content(cssClass: "content-pane")
+    </section>
+</div>
