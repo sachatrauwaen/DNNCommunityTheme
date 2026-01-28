@@ -1,0 +1,28 @@
+@using DotNetNuke.Web.MvcPipeline.Models
+@using DotNetNuke.Web.MvcPipeline.Skins
+@using DotNetNuke.Web.NewDDRMenu
+
+@model PageModel
+
+<header class="skin-header">
+    <div class="header-top">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="logo col col-6 col-lg-3 flex-vert-align">
+                @Html.SkinPartial("partials/_logo")
+            </div>
+            <div class="col d-lg-none text-end d-flex justify-content-end align-items-center">
+                <button id="navbar-toggler" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+            </div>
+            @* Top navigation *@
+            <div class="col-12 col-lg">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        @Html.DDRMenu(clientID: "menu_top", menuStyle: "assets/menus/topmenu", excludeNodes: "Admin,Host")
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>

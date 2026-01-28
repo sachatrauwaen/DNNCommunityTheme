@@ -1,0 +1,37 @@
+@using DotNetNuke.Web.MvcPipeline.Models
+@using DotNetNuke.Web.MvcPipeline.Skins
+
+@model PageModel
+
+<footer class="skin-footer bg-blue-super-dark skew-top">
+    <div class="container py-5">
+        <div class="row gx-5">
+            <div class="col">
+                @Html.Pane(id: "footer_pane_1", cssClass: "pane footer_pane_1 col")
+            </div>
+            <div class="col">
+                @Html.Pane(id: "footer_pane_2", cssClass: "pane footer_pane_2 col")
+            </div>
+            <div class="col">
+                @Html.Pane(id: "footer_pane_3", cssClass: "pane footer_pane_3 col")
+            </div>
+            <div class="col">
+                @Html.Pane(id: "footer_pane_4", cssClass: "pane footer_pane_4 col")
+            </div>
+        </div>
+    </div>
+    @Html.Pane(id: "footer_pane_full_width", cssClass: "pane footer_pane_full_width pb-0")
+    <div class="footer-bottom">
+        <div class="container pt-2">
+            <div class="row">
+                <ul class="d-block d-md-flex pt-2">
+                    <li>@Html.Copyright()</li>
+                    <li><a href="/Contributors" rel="nofollow">Website Contributors</a></li>
+                    <li><a href="https://dotnetfoundation.org" target="_blank">Supported by the .NET Foundation</a></li>
+                    <li>@Html.Terms()</li>
+                    <li>@Html.Privacy()</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>

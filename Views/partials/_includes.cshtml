@@ -1,8 +1,10 @@
 @using DotNetNuke.Web.MvcPipeline.Models
 @using DotNetNuke.Web.MvcPipeline.Skins
+
 @model PageModel
 
-@{
+@section head {
+    @* FontAwesome 5 + 4 shim *@
     @Html.DnnCssInclude(filePath: "vendors/fontawesome/css/all.css", pathNameAlias: "SkinPath", priority: 15)
     @Html.DnnCssInclude(filePath: "vendors/fontawesome/css/v4-shims.min.css", pathNameAlias: "SkinPath", priority: 15)
 }
