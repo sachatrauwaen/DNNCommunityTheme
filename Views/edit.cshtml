@@ -19,7 +19,7 @@
         <div class="sticky-top">
             @Html.SkinPartial("partials/_top-bar-login-search")
             
-            <header class="skin-header">
+            <header class="skin-header bg-blue-extra-dark">
                 <div class="header-top">
                 </div>
                 <div class="container">
@@ -43,7 +43,18 @@
             </header>
         </div>
 
-        @Html.SkinPartial("partials/_panes")
+        @* Page content *@
+        <main class="skin-main content-wrap">
+            <div class="panes">
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-12">
+                            @Html.Pane(id: "contentpane", cssClass: "pane content-pane")
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
 
         <footer class="skin-footer bg-blue-super-dark skew-top">
             <div class="container py-5">

@@ -1,0 +1,12 @@
+@using DotNetNuke.Web.MvcPipeline.Models
+@using DotNetNuke.Web.MvcPipeline.Skins
+
+@model PageModel
+
+@section head {
+    @* Meta tags *@
+    @Html.Meta(name: "X-UA-Compatible", content: "IE=edge")
+    @Html.Meta(name: "viewport", content: "width=device-width, initial-scale=1, shrink-to-fit=no")
+}
+
+@Html.Pane(id: "ContentPane")

@@ -1,6 +1,6 @@
 ---
 name : dnn-skin
-description: Guide user in adding mvc pipeline support to an existing skin. A full example is located in the [Aperture](./aperture) folder. Always end with checking the Transformation Checklist
+description: Guide user in adding mvc pipeline support to an existing skin. A full example is located in the [Aperture](./aperture) folder. Always end with checking the [Transformation Checklist](#transformation-checklist)
 ---
 
 # DNN WebForms to MVC Pipeline Skin Transformation Guide
@@ -13,7 +13,7 @@ description: Guide user in adding mvc pipeline support to an existing skin. A fu
 5. [Partial File Transformation](#partial-file-transformation)
 6. [Control/Tag Reference Guide](#controltag-reference-guide)
 7. [Complete Examples](#complete-examples)
-8. [Using Code in Skins](#code-transform)
+8. [Transformation Checklist](#transformation-checklist)
 ---
 
 ## Overview
