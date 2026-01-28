@@ -1,6 +1,5 @@
 @using DotNetNuke.Web.MvcPipeline.Models
 @using DotNetNuke.Web.MvcPipeline.Skins
-
 @model PageModel
 
 <div class="body-top-bar">
@@ -8,11 +7,11 @@
         <div class="row">
             <div class="login-user-search">
                 <div id="login" class="user-login-wrap">
-                    @Html.User(legacyMode: false, cssClass: "user-link")
-                    @Html.Login(legacyMode: false, cssClass: "login-link")
+                    @Html.User(cssClass: "user-link")
+                    @Html.Login(cssClass: "login-link")
                 </div>
                 <div class="search-wrap">
-                    @Html.Search(showSite: false, showWeb: false, enableTheming: true, cssClass: "SearchButton", submit: "<i class=\"fa fa-search\"></i>")
+                    @Html.Search(showSite: false, showWeb: false, enableTheming: true, submit: "<i class=\"fa fa-search\"></i>", cssClass: "SearchButton")
                 </div>
             </div>
         </div>
